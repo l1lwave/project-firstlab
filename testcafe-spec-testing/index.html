@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Jackets - Tops - Men</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .cart-status { background: #eee; padding: 10px; margin-bottom: 20px; }
+        .products-grid { display: flex; gap: 10px; }
+        .product-item { border: 1px solid #ccc; padding: 10px; }
+        .success-message { color: green; display: none; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="cart-status">Кошик: <span id="cart-count">0</span></div>
+    <input type="text" id="search" placeholder="Пошук...">
+    
+    <div class="products-grid">
+        <div class="product-item">
+            <h3>Proteus Fitness Jacket</h3>
+            <button class="add-to-cart" onclick="addToCart()">Додати в кошик</button>
+            <div id="msg" class="success-message">Товар додано!</div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="filter-options-item">Category</div>
+        <div class="filter-options-item">Size</div>
+    </div>
+
+    <span class="toolbar-number">12</span>
+
+    <script>
+        function addToCart() {
+            document.getElementById('cart-count').innerText = "1";
+            document.getElementById('msg').style.display = "block";
+        }
+    </script>
+</body>
+</html>
